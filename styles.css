@@ -12,7 +12,7 @@ body {
 .timer-container {
     text-align: center;
     padding: 3rem;
-    background-color: white;
+    background-color: grey;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
