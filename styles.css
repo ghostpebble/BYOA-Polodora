@@ -1,0 +1,145 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-seri;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f6f9fc 0%, #edf2f7 100%);
+}
+
+.timer-container {
+    text-align: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.timer-container:hover {
+    transform: translateY(-2px);
+}
+
+#time {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 1.5rem 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    background-color: #4299e1;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(66, 153, 225, 0.1);
+}
+
+button:hover {
+    background-color: #3182ce;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 8px rgba(66, 153, 225, 0.2);
+}
+
+#reset {
+    background-color: #fc8181;
+}
+
+#reset:hover {
+    background-color: #f56565;
+}
+
+button:disabled {
+    background-color: #e2e8f0;
+    color: #a0aec0;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#mode {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+}
+
+.mode-buttons {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #38B2AC;
+    transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+input:checked + .slider {
+    background-color: #9F7AEA;
+}
+
+input:checked + .slider:before {
+    transform: translateX(126px);
+}
+
+.slider-text {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.slider-text.work {
+    margin-left: 15px;
+}
+
+.slider-text.rest {
+    margin-right: 15px;
+} 
